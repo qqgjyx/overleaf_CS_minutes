@@ -1,0 +1,49 @@
+\documentclass[12pt]{article} % Sets the font size to 12pt and defines the document as an article
+
+% Packages for mathematical fonts and symbols
+\usepackage{amsfonts, amssymb, amsmath}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{ulem}
+\usepackage{tabularx}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{graphicx}
+
+
+% Uncomment the following lines if you want to enable double spacing
+%\usepackage{setspace}
+%\doublespacing
+
+% Margin settings
+\usepackage[margin=1in]{geometry} % Simplifies margin settings using the geometry package
+
+% Header and footer customization
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{} % Clears default header and footer
+\fancyhead[L]{CS/JuntangWang} 
+\fancyhead[C]{\today} 
+\fancyhead[R]{\thepage} 
+
+% Custom commands
+\newcommand{\eqn}{\begin{array}{rcl}} % Begin an aligned equation environment
+\newcommand{\eqnend}{\end{array}}    % End the aligned equation environment
+\newcommand{\qed}{\hfill $\square$} % End of proof symbol
+
+% Title Information
+\title{CS521 Homework1} % Replace with your actual title
+\author{Juntang Wang}        % Replace with your actual name
+\date{\today}             % Automatically uses the current date
+
+\begin{document}
+\section{Results}
+\input{sections/results}
+\section{Datasets}
+\input{sections/datasets}
+
+
+\bibliography{HSI}
+\bibliographystyle{IEEEtran}
+
+\end{document}
