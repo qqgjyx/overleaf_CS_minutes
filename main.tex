@@ -1,49 +1,44 @@
-\documentclass[12pt]{article} % Sets the font size to 12pt and defines the document as an article
+\documentclass[11pt]{article}
 
-% Packages for mathematical fonts and symbols
-\usepackage{amsfonts, amssymb, amsmath}
-\usepackage{booktabs}
-\usepackage{float}
-\usepackage{ulem}
-\usepackage{tabularx}
-\usepackage[ruled,vlined]{algorithm2e}
+% Packages
+\usepackage{cite}
+\usepackage{hyperref} 
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{xcolor,bbold}
+\usepackage{enumitem}
 \usepackage{graphicx}
-
-
-% Uncomment the following lines if you want to enable double spacing
-%\usepackage{setspace}
-%\doublespacing
-
-% Margin settings
-\usepackage[margin=1in]{geometry} % Simplifies margin settings using the geometry package
-
-% Header and footer customization
+\usepackage{geometry}
 \usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{bm}
 
+% Page style
+\geometry{top=1in,bottom=1in,left=1in,right=1in}
+\setlength{\headheight}{13.6pt}
 \pagestyle{fancy}
-\fancyhf{} % Clears default header and footer
-\fancyhead[L]{CS/JuntangWang} 
-\fancyhead[C]{\today} 
-\fancyhead[R]{\thepage} 
+\doublespacing
 
-% Custom commands
-\newcommand{\eqn}{\begin{array}{rcl}} % Begin an aligned equation environment
-\newcommand{\eqnend}{\end{array}}    % End the aligned equation environment
-\newcommand{\qed}{\hfill $\square$} % End of proof symbol
+% Document settings
+\textheight=8.5truein
+\textwidth=6.0truein
 
-% Title Information
-\title{CS521 Homework1} % Replace with your actual title
-\author{Juntang Wang}        % Replace with your actual name
-\date{\today}             % Automatically uses the current date
+% Header information
+\lhead{Juntang Wang}
+\rhead{Fall 2024}
+\chead{Minutes}
 
 \begin{document}
+
 \section{Results}
 \input{sections/results}
+
 \section{Datasets}
 \input{sections/datasets}
 
-
-\bibliography{HSI}
-\bibliographystyle{IEEEtran}
+\bibliographystyle{plain}
+\bibliography{HSI} 
 
 \end{document}

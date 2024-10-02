@@ -1,0 +1,38 @@
+\begin{thebibliography}{1}
+
+\bibitem{clasen2024refinedbigearthnet}
+Kai~Norman Clasen, Leonard Hackel, Tom Burgert, Gencer Sumbul, Begüm Demir,
+  and Volker Markl.
+\newblock {{reBEN}}: {{Refined BigEarthNet}} dataset for remote sensing image
+  analysis.
+\newblock NULL.
+
+\bibitem{hackel2024configilm}
+Leonard Hackel, Kai~Norman Clasen, and Begüm Demir.
+\newblock {{ConfigILM}}: {{A}} general purpose configurable library for
+  combining image and language models for visual question answering.
+\newblock 26:101731.
+
+\bibitem{huWHUhiUAVborneHyperspectral}
+Xin Hu, Yanfei Zhong, Chang Luo, and Xinyu Wang.
+\newblock {{WHU-hi}}: {{UAV-borne}} hyperspectral with high spatial resolution
+  ({{H2}}) benchmark datasets for hyperspectral image classification.
+
+\bibitem{pavia_datasets}
+G.~A. Licciardi and F.~Del Frate.
+\newblock Hyperspectral remote sensing scenes - pavia university and pavia
+  centre datasets.
+
+\bibitem{PURR1947}
+{Marion F. Baumgardner}, {Larry L. Biehl}, and David~A. Landgrebe.
+\newblock 220 band {{AVIRIS}} hyperspectral image data set: {{June}} 12, 1992
+  {{Indian}} pine test site 3.
+
+\bibitem{zhongMiniUAVborneHyperspectralRemote2018}
+Yanfei Zhong, Xinyu Wang, Yao Xu, Shaoyu Wang, Tianyi Jia, Xin Hu, Ji~Zhao,
+  Lifei Wei, and Liangpei Zhang.
+\newblock Mini-{{UAV-borne}} hyperspectral remote sensing: {{From}} observation
+  and processing to applications.
+\newblock 6(4):46--62.
+
+\end{thebibliography}
