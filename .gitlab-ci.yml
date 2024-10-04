@@ -7,7 +7,7 @@ sync_job:
   script:
     - apt-get update && apt-get install -y git
     - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git  # Replace with your GitHub repo URL
-    - cd repo
+    - cd overleaf_CS_Minutes
     - git remote add gitlab https://gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git  # Replace with your GitLab repo URL
     - git push gitlab main  # Replace 'main' with your primary branch name
   only:
