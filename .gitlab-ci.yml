@@ -9,7 +9,7 @@ sync_job:
     - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git  # Clone your GitHub repo
     - cd overleaf_CS_Minutes  # Change to the correct cloned directory
     - git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git  # Use token for authentication
-    - git pull gitlab main  # Pull changes from GitLab
+    - git pull gitlab main --allow-unrelated-histories  # Allow unrelated histories
     - git push gitlab main  # Push to your GitLab repo
   only:
     - main  # Adjust as necessary
