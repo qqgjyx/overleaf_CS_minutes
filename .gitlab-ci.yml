@@ -6,10 +6,12 @@ sync_job:
   image: ubuntu:20.04
   script:
     - apt-get update && apt-get install -y git
-    - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git  # Clone your GitHub repo
-    - cd overleaf_CS_Minutes  # Change to the correct cloned directory
-    - git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git  # Use token for authentication
-    - git pull gitlab main --allow-unrelated-histories  # Allow unrelated histories
-    - git push gitlab main  # Push to your GitLab repo
+    - git config --global user.email "jw853@duke.edu"  # Replace with your email
+    - git config --global user.name "qqgjyx"  # Replace with your name
+    - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git
+    - cd overleaf_CS_Minutes
+    - git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git
+    - git pull gitlab main --allow-unrelated-histories
+    - git push gitlab main
   only:
     - main  # Adjust as necessary
