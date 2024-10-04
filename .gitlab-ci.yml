@@ -1,7 +1,7 @@
 stages:
   - sync
 
-sync_job:
+sync_to_gitlab:
   stage: sync
   image: ubuntu:20.04
   script:
