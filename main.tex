@@ -1,7 +1,6 @@
 \documentclass[11pt]{article}
 
 % Packages
-\usepackage{cite}
 \usepackage{hyperref} 
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -14,6 +13,19 @@
 \usepackage{fancyhdr}
 \usepackage{setspace}
 \usepackage{bm}
+
+\usepackage[
+backend=biber, 
+citestyle=ieee,
+sorting=nyt,    
+doi=false,
+url=false,
+isbn=false,
+giveninits=true,
+maxbibnames=9999,
+hyperref]{biblatex}
+
+\addbibresource{HSI.bib} 
 
 % Page style
 \geometry{top=1in,bottom=1in,left=1in,right=1in}
@@ -38,7 +50,6 @@
 \section{Datasets}
 \input{sections/datasets}
 
-\bibliographystyle{plain}
-\bibliography{HSI} 
+\printbibliography
 
-\end{document}
+\end{document} 
