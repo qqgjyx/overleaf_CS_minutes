@@ -3,12 +3,12 @@ stages:
 
 sync_job:
   stage: sync
-  image: ubuntu:20.04  # Use an Ubuntu image that includes apt-get
+  image: ubuntu:20.04
   script:
     - apt-get update && apt-get install -y git
-    - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git  # Replace with your GitHub repo URL
-    - cd overleaf_CS_Minutes
-    - git remote add gitlab https://gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git  # Replace with your GitLab repo URL
-    - git push gitlab main  # Replace 'main' with your primary branch name
+    - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git  # Clone your GitHub repo
+    - cd overleaf_CS_Minutes  # Change to the correct cloned directory
+    - git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git  # Use token for authentication
+    - git push gitlab main  # Push to your GitLab repo
   only:
-    - main  # Replace with your primary branch name
+    - main  # Adjust as necessary
