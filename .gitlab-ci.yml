@@ -15,3 +15,20 @@ sync_job:
     - git push gitlab main
   only:
     - main  # Adjust as necessary
+
+sync_to_github:
+  stage: sync
+  image: ubuntu:20.04
+  script:
+    - apt-get update && apt-get install -y git
+    - git config --global user.email "jw853@duke.edu"
+    - git config --global user.name "qqgjyx"
+    # Pull changes from GitLab
+    - git clone https://gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git temp_repo
+    - cd temp_repo
+    - git pull origin main
+    - cd ..
+    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/qqgjyx/overleaf_CS_Minutes.git
+    - git push github main
+  only:
+    - main  # Adjust as necessary
