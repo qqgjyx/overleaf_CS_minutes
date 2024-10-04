@@ -10,14 +10,14 @@ sync_job:
     - git config --global user.name "qqgjyx"  # Replace with your name
     
     # Sync from GitHub to GitLab
-    - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git temp_repo
+    - git clone https://github.com/qqgjyx/overleaf_CS_minutes.git temp_repo
     - cd temp_repo
     - git remote add gitlab https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git
     - git pull gitlab main --allow-unrelated-histories || echo "No changes from GitLab"
     - git push gitlab main || echo "Already up to date on GitLab"
     
     # Sync from GitLab to GitHub
-    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/qqgjyx/overleaf_CS_Minutes.git
+    - git remote add github https://oauth2:${GITHUB_TOKEN}@github.com/qqgjyx/overleaf_CS_minutes.git
     - git pull github main || echo "No changes from GitHub"
     - git push github main || echo "Already up to date on GitHub"
     
