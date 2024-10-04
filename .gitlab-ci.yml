@@ -3,7 +3,7 @@ stages:
 
 sync_job:
   stage: sync
-  image: docker:stable
+  image: ubuntu:20.04  # Use an Ubuntu image that includes apt-get
   script:
     - apt-get update && apt-get install -y git
     - git clone https://github.com/qqgjyx/overleaf_CS_Minutes.git  # Replace with your GitHub repo URL
