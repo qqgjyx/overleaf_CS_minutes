@@ -24,7 +24,7 @@ sync_to_github:
     - git config --global user.email "jw853@duke.edu"
     - git config --global user.name "qqgjyx"
     # Pull changes from GitLab
-    - git clone https://gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git temp_repo
+    - git clone https://oauth2:${GITLAB_TOKEN}@gitlab.oit.duke.edu/jw853/clustering4hsi_minutes.git temp_repo
     - cd temp_repo
     - git pull origin main
     - cd ..
