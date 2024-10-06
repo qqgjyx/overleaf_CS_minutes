@@ -1,0 +1,106 @@
+
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\setlength{\marginparwidth}{0.8in}
+\usepackage{xargs}
+
+\usepackage{geometry}
+
+\geometry{letterpaper,
+  left=0.25in,
+  right=1.75in,
+  top=1in,
+  bottom=1in,
+  footskip=1.7cm,
+  marginparwidth=1.5in
+}
+
+\newcounter{mycommentJW}
+\newcommandx{\juntang}[2][1=]{
+  % initials of the author (optional) + note in the margin
+  \refstepcounter{mycommentJW}%
+  {%
+    \ifthenelse{\equal{#1}{inline}}%
+    {%
+      \addtocounter{@todonotes@numberoftodonotes}{1}%
+      \addcontentsline{tdo}{todo}{%
+        \fcolorbox{black}%
+        {brown!20!white}%
+        {\phantom{o}}%
+        \ \textbf{[\uppercase{JW}\themycommentJW]:}~#2}%
+      \textcolor{brown}{\textbf{[\uppercase{JW}\themycommentJW]:}~#2}
+    }%
+    {%
+      \todo[color={brown!20!white},#1]{%
+        \textbf{[\uppercase{JW}\themycommentJW]:}~#2}%
+    }
+  }
+}
+
+\newcounter{mycommentDF}
+\newcommandx{\dimitris}[2][1=]{
+  % initials of the author (optional) + note in the margin
+  \refstepcounter{mycommentDF}%
+  {%
+    \ifthenelse{\equal{#1}{inline}}%
+    {%
+      \addtocounter{@todonotes@numberoftodonotes}{1}%
+      \addcontentsline{tdo}{todo}{%
+        \fcolorbox{black}%
+        {blue!20!white}%
+        {\phantom{o}}%
+        \ \textbf{[\uppercase{DF}\themycommentDF]:}~#2}%
+      \textcolor{blue}{\textbf{[\uppercase{DF}\themycommentDF]:}~#2}
+    }%
+    {%
+      % Code to execute if #1 is not "inline"
+      \todo[color={blue!20!white},#1]{%
+        \textbf{[\uppercase{DF}\themycommentDF]:}~#2}%
+    }%
+  }
+}
+
+\newcounter{mycommentNP}
+\newcommandx{\nikos}[2][1=]{
+  % initials of the author (optional) + note in the margin
+  \refstepcounter{mycommentNP}%
+  {%
+    \ifthenelse{\equal{#1}{inline}}%
+    {%
+      \addtocounter{@todonotes@numberoftodonotes}{1}%
+      \addcontentsline{tdo}{todo}{%
+        \fcolorbox{black}%
+        {ForestGreen!20!white}%
+        {\phantom{o}}%
+        \ \textbf{[\uppercase{NP}\themycommentNP]:}~#2}%
+      \textcolor{ForestGreen}{\textbf{[\uppercase{NP}\themycommentNP]:}~#2}
+    }%
+    {%
+      % Code to execute if #1 is not "inline"
+      \todo[color={ForestGreen!20!white}]{%
+        \textbf{[\uppercase{NP}\themycommentNP]:}~#2}%
+    }%
+  }
+}
+
+\newcounter{mycommentXS}
+\newcommandx{\xiaobai}[2][1=]{
+  % initials of the author (optional) + note in the margin
+  \refstepcounter{mycommentXS}%
+  {%
+    \ifthenelse{\equal{#1}{inline}}%
+    {%
+      \addtocounter{@todonotes@numberoftodonotes}{1}%
+      \addcontentsline{tdo}{todo}{%
+        \fcolorbox{black}%
+        {purple!20!white}%
+        {\phantom{o}}%
+        \ \textbf{[\uppercase{XS}\themycommentXS]:}~#2}%
+      \textcolor{purple}{\textbf{[\uppercase{XS}\themycommentXS]:}~#2}
+    }%
+    {%
+      % Code to execute if #1 is not "inline"
+      \todo[color={purple!20!white}]{%
+        \textbf{[\uppercase{XS}\themycommentXS]:}~#2}%
+    }%
+  }
+}
