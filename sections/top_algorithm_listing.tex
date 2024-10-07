@@ -1,0 +1,67 @@
+
+
+\begin{algorithm}[H] 
+  %
+  \caption{  \footnotesize
+    BEER/Guinness: Effective, Efficient and Robust Method for
+    segmenting Big HSIs
+    \label{alg:ben-tile} }
+  %%%
+  \SetAlgoLined
+  \SetKwInOut{Input}{Input}
+  \SetKwInOut{Output}{Output}
+  \SetKwRepeat{Do}{do}{while}
+  \SetKwFunction{filter}{filter}
+%%%% 
+  {Input:\ } ${\rm Im}(:) \times F$ \phantom{space}
+  // {\footnotesize a collection of signal/image tiles with Feature vectors in $F$}
+  \\
+  {\rm Parameters:\ }
+  \\
+  \phantom{Input:\ } $w(:)$ \phantom{space}
+  // {\footnotesize spatial window sizes}
+  \\
+  \phantom{Input:\ } $ {\rm shift}(:) $ \phantom{space xxx}
+  // {\footnotesize convolution shifts}
+  \\
+  \phantom{Input:\ } $ k $ \phantom{make space xxx}
+  // {\footnotesize for knn graph construction}
+  \\
+  \phantom{Input:\ } $h$\, \phantom{make space xx}
+  // {\footnotesize clustering function}
+  \\
+  \phantom{Input:\ } $ \tau(:) $ \phantom{make space}
+  // {\footnotesize two thresholds in BlueRed}
+  \\
+  {\rm Output:\ } $L(\rm Im)$\, \phantom{space}
+  // {\footnotesize each pixel is attributed with a label tuple}
+  %%% ========================================================
+  \\
+  \underline{Tile convolution \& local label tuples:}
+  \\ 
+  For $\mbox{\rm Im}_{\rm w}  \in$ {\rm tile-convolution-list}( w, shift)
+  \\
+  \phantom{xxx} construct of knn graph $G_{\rm w}$
+  \phantom{xxx} // {\footnotesize size from pixel features, can be efficient}  
+  \\
+  \phantom{xxx}
+  $\mbox{\rm brf}(h,G_{\rm w}) :=\!+\! {\  }  \mbox{\rm BlueRed}( h,G_{\rm w},
+  \tau(:) )$
+  \\
+  \phantom{xxx}
+  $L({\rm Im}_{\rm w}) := \mbox{\rm brf}(h,G_{\rm w})$
+  \phantom{xxx} // {\footnotesize $\gamma$-tuple label for each pixel } 
+  \\
+  \underline{Label consolidation: alignment \& differentiation}
+  \\
+  $L(\rm Im) := \mbox{\rm global\_label\_pixels}(\, L({\rm Im})(:)\, ) $ 
+  \phantom{xx} // {\footnotesize \* to be developed from experimental feedback} 
+  \\
+  \phantom{make invisible space}
+%% 
+\end{algorithm}
+
+%%% =============================
+%%% initial draft: Xiaobai Sun
+%%% Oct. 07, 2024
+%%% 
