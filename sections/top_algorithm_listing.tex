@@ -18,7 +18,7 @@
   \\
   {\rm Parameters:\ }
   \\
-  \phantom{Input:\ } $w(:)$ \phantom{space}
+  \phantom{Input:\ } $w(:)$ \phantom{make space}
   // {\footnotesize spatial window sizes}
   \\
   \phantom{Input:\ } $ {\rm shift}(:) $ \phantom{space xxx}
@@ -35,6 +35,7 @@
   \\
   {\rm Output:\ } $L(\rm Im)$\, \phantom{space}
   // {\footnotesize each pixel is attributed with a label tuple}
+  %%% 
   %%% ========================================================
   \\
   \underline{Tile convolution \& local label tuples:}
@@ -42,15 +43,19 @@
   For $\mbox{\rm Im}_{\rm w}  \in$ {\rm tile-convolution-list}( w, shift)
   \\
   \phantom{xxx} construct of knn graph $G_{\rm w}$
-  \phantom{xxx} // {\footnotesize size from pixel features, can be efficient}  
+  \phantom{make space }
+  // {\footnotesize from pixel features, can be efficient}  
   \\
   \phantom{xxx}
-  $\mbox{\rm brf}(h,G_{\rm w}) :=\!+\! {\  }  \mbox{\rm BlueRed}( h,G_{\rm w},
-  \tau(:) )$
+  $\mbox{\rm brf}(h,G_{\rm w}) :=\!+\! {\  }
+    \mbox{\rm BlueRed}( h,G_{\rm w}, \tau(:) )$
+    \phantom{xxxx}
+    // {\footnotesize need a simple data structure}  
   \\
   \phantom{xxx}
   $L({\rm Im}_{\rm w}) := \mbox{\rm brf}(h,G_{\rm w})$
-  \phantom{xxx} // {\footnotesize $\gamma$-tuple label for each pixel } 
+  \phantom{make space to align}
+  // {\footnotesize $\gamma$-tuple label for each pixel } 
   \\
   \underline{Label consolidation: alignment \& differentiation}
   \\
