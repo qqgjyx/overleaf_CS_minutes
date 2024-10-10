@@ -311,3 +311,8 @@ TSWLatexianTemp*
 #*Notes.bib
 
 .DS_Store
+
+# except the *.pdf in figures
+!figures/*.pdf
+
+*.pdf
