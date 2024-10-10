@@ -1,0 +1,25 @@
+% meeting minutes: BEER Python prototype by Dimitris
+
+\begin{list}{$-$}{}
+\item \dimitris[inline]{Revised the BEN loader:} We now have the correct 
+  location coordinates (longitude/latitude) for each tile/pixel, allowing 
+  us to stitch the tiles together, even when dealing with potential irregular 
+  boundaries. The locations have been verified by overlaying them on 
+  OpenStreetMaps and visually comparing the tiles with the RGB images. 
+  See Fig.~\ref{fig:ben_overview} for an example subset of the BEN dataset.
+
+\item \dimitris[inline]{Completed the sliding-window prototype of the BEER 
+    algorithm:} The sliding window adapts to irregular boundaries and 
+  missing tiles. For an illustration, see the animation at the following link:
+
+  \url{https://gitlab.oit.duke.edu/jw853/clustering4hsi/-/raw/main/outdir/10.Oct_10_BEER_Prototype/ben_sliding.gif}
+  
+\end{list}
+
+\begin{figure}[!htpb]
+  \centering
+  \includegraphics[width=0.9\linewidth]{figures/ben_overview.png}
+  \caption{Overview of a subset of the BigEarthNetV2 dataset (the area
+    shown is located in Austria).}
+  \label{fig:ben_overview}
+\end{figure}

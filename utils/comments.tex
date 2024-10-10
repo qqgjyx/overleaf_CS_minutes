@@ -15,7 +15,7 @@
 }
 
 \newcounter{mycommentJW}
-\newcommandx{\juntang}[2][1=]{
+\newcommandx{\juntang}[2][1=]{%
   % initials of the author (optional) + note in the margin
   \refstepcounter{mycommentJW}%
   {%
@@ -27,17 +27,17 @@
         {brown!20!white}%
         {\phantom{o}}%
         \ \textbf{[\uppercase{JW}\themycommentJW]:}~#2}%
-      \textcolor{brown}{\textbf{[\uppercase{JW}\themycommentJW]:}~#2}
+      \textcolor{brown}{\textbf{[\uppercase{JW}\themycommentJW]:}~#2}%
     }%
     {%
       \todo[color={brown!20!white},#1]{%
         \textbf{[\uppercase{JW}\themycommentJW]:}~#2}%
-    }
-  }
-}
+    }%
+  }%
+}%
 
 \newcounter{mycommentDF}
-\newcommandx{\dimitris}[2][1=]{
+\newcommandx{\dimitris}[2][1=]{%
   % initials of the author (optional) + note in the margin
   \refstepcounter{mycommentDF}%
   {%
@@ -49,18 +49,18 @@
         {blue!20!white}%
         {\phantom{o}}%
         \ \textbf{[\uppercase{DF}\themycommentDF]:}~#2}%
-      \textcolor{blue}{\textbf{[\uppercase{DF}\themycommentDF]:}~#2}
+      \textcolor{blue}{\textbf{[\uppercase{DF}\themycommentDF]:}~#2}%
     }%
     {%
       % Code to execute if #1 is not "inline"
       \todo[color={blue!20!white},#1]{%
         \textbf{[\uppercase{DF}\themycommentDF]:}~#2}%
     }%
-  }
-}
+  }%
+}%
 
 \newcounter{mycommentNP}
-\newcommandx{\nikos}[2][1=]{
+\newcommandx{\nikos}[2][1=]{%
   % initials of the author (optional) + note in the margin
   \refstepcounter{mycommentNP}%
   {%
@@ -72,18 +72,18 @@
         {ForestGreen!20!white}%
         {\phantom{o}}%
         \ \textbf{[\uppercase{NP}\themycommentNP]:}~#2}%
-      \textcolor{ForestGreen}{\textbf{[\uppercase{NP}\themycommentNP]:}~#2}
+      \textcolor{ForestGreen}{\textbf{[\uppercase{NP}\themycommentNP]:}~#2}%
     }%
     {%
       % Code to execute if #1 is not "inline"
       \todo[color={ForestGreen!20!white}]{%
         \textbf{[\uppercase{NP}\themycommentNP]:}~#2}%
     }%
-  }
-}
+  }%
+}%
 
 \newcounter{mycommentXS}
-\newcommandx{\xiaobai}[2][1=]{
+\newcommandx{\xiaobai}[2][1=]{%
   % initials of the author (optional) + note in the margin
   \refstepcounter{mycommentXS}%
   {%
@@ -95,12 +95,12 @@
         {purple!20!white}%
         {\phantom{o}}%
         \ \textbf{[\uppercase{XS}\themycommentXS]:}~#2}%
-      \textcolor{purple}{\textbf{[\uppercase{XS}\themycommentXS]:}~#2}
+      \textcolor{purple}{\textbf{[\uppercase{XS}\themycommentXS]:}~#2}%
     }%
     {%
       % Code to execute if #1 is not "inline"
       \todo[color={purple!20!white}]{%
         \textbf{[\uppercase{XS}\themycommentXS]:}~#2}%
     }%
-  }
-}
+  }%
+}%
