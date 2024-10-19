@@ -16,6 +16,7 @@
 \usepackage{bm}
 \usepackage{multicol}
 \usepackage{algorithm2e}
+\usepackage[title,titletoc]{appendix}
 
 \usepackage[
 backend=biber, 
@@ -55,10 +56,12 @@ hyperref]{biblatex}
 
 \clearpage
 
+\section{24-10-19\_8-14\&thesis}
+\input{sections/24-10-19_8-14&thesis}
 \section{24-10-10\_BEER Prototype}
 \input{sections/24-10-10_BEER_Prototype}
 \section{24-10-07\_BEER\&BEN}
-\input{sections/24-10-07_BEER&BEN}
+\input{sections/24-10-07_BEER&BEN} \label{sec:24-10-07_BEER&BEN}
 \section{24-10-07: Top algorithm: prototype listing}
 \input{sections/top_algorithm_listing}
 \section{24-09-30\_HAR\&BEN}
@@ -75,6 +78,10 @@ hyperref]{biblatex}
 \input{sections/24-07-24_PRE}
 \section{24-07-09\_SOTA}
 \input{sections/24-07-09_SOTA}
+
+\begin{appendices}
+	\include{sections/task_list}
+\end{appendices}
 
 \printbibliography
 
