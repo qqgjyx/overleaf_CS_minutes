@@ -8,7 +8,7 @@ main = dnxj-minutes
 .PHONY: all clean
 
 all:
-	latexmk -pdf $(main)
+	latexmk -f -pdf $(main)
 
 clean:
 	latexmk -C $(main).tex
